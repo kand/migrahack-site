@@ -1,1 +1,1 @@
-web: node src/index.js
+web: PORT=80 node src/index.js
