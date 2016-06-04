@@ -1,0 +1,21 @@
+{
+  "name": "migrahack-site",
+  "description": "",
+  "main": "src/index.js",
+  "authors": [
+    "Andrew Kos <akos123@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kand/migrahack-site",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.3.0"
+  }
+}
