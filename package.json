@@ -5,12 +5,14 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
+    "setup": "bower install",
     "serve-dev": "nodemon src/index",
     "serve": "node src/index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bower": "^1.7.9",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.5"
