@@ -6,7 +6,7 @@ let path = require('path');
 
 let app = express();
 
-const APP_PORT = 8080;
+const APP_PORT = process.env.PORT || 8080;
 const APP_HOSTNAME = 'localhost';
 const DIR_TEMPLATES = path.join('.', 'src', 'templates');
 
