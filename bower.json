@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "reveal.js": "~3.3.0"
   }
 }
