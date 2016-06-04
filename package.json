@@ -1,0 +1,21 @@
+{
+  "name": "migrahack-site",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "serve-dev": "nodemon src/index",
+    "serve": "node src/index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
