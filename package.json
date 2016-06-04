@@ -6,8 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "setup": "bower install",
-    "serve-dev": "nodemon src/index",
-    "serve": "node src/index"
+    "start-dev": "npm run setup && nodemon src/index",
+    "start": "npm run setup && node src/index"
   },
   "author": "",
   "license": "ISC",
