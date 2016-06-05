@@ -2,4 +2,4 @@ const $ = require('jquery');
 
 const menu = require('./menu/menu');
 
-menu.build($('#slides section'));
+menu.build('#menu', '#slides section');

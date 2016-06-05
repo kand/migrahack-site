@@ -1,18 +1,24 @@
-'use strict';
-
 const $ = require('jquery');
 
-let addMenuItem = (item) => {
+let setupMenu = (menu) => {
+  let $menu = $(menu);
+
+  return $menu;
+};
+
+let addMenuItem = ($menu, item) => {
   let $item = $(item);
   let title = $item.data('title');
 
-  console.log(title);
+  $menu.append(`<li><i class="menu-circle fa fa-circle"></i><span>${title}</span></li>`);
 };
 
 module.exports = {
-  build (selector) {
-    $(selector).each(function () {
-      addMenuItem(this);
+  build (menuSelector, itemsSelector) {
+    let $menu = setupMenu(menuSelector);
+
+    $(itemsSelector).each(function () {
+      addMenuItem($menu, this);
     });
   }
 };
