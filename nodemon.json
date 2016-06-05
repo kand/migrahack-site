@@ -2,8 +2,7 @@
   "verbose": true,
   "ext": "js,hbs",
   "events": {
-    "start": "src/index",
-    "restart": "src/index"
+    "restart": "webpack"
   },
   "ignore": ["public/*"]
 }

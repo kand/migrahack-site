@@ -19,7 +19,6 @@ app.set('view engine', 'hbs');
 app.set('views', DIR_TEMPLATES);
 
 app.use('/static', express.static('public'));
-app.use('/static/bower', express.static('bower_components'));
 app.use('', require('./routes'));
 
 app.listen(APP_PORT, () => {

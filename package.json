@@ -5,19 +5,24 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "setup": "bower install",
-    "start-dev": "npm run setup && nodemon src/index",
-    "start": "npm run setup && node src/index"
+    "start-dev": "webpack && nodemon src/index",
+    "start": "webpack && node src/index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bower": "^1.7.9",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.5"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "bourbon": "^4.2.7",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
   }
 }
