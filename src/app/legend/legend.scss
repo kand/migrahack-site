@@ -1,0 +1,19 @@
+@import '../colors';
+
+#legend {
+  background-color: $migrahack-overlay;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: $migrahack-overlay-color;
+  list-style: none;
+  margin: 25px;
+  padding: 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  max-width: 15%;
+
+  img {
+    width: 50%;
+  }
+}

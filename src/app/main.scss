@@ -1,16 +1,20 @@
 @import 'bourbon';
 @import 'neat';
 
-@import './bitters/_lists';
+@import './bitters/_base';
 
 @import './colors';
 
 @import './slider/slider';
+@import './infobox/infobox';
+@import './legend/legend';
 
 body {
   @include outer-container;
+
+  background-color: $migrahack-background;
+  margin: 0;
 }
 
 #main-container {
-  background-color: $migrahack-background;
 }

@@ -18,6 +18,7 @@ app.engine('hbs', expressHandlebars({
 app.set('view engine', 'hbs');
 app.set('views', DIR_TEMPLATES);
 
+app.use('/images', express.static('src/images'));
 app.use('/static', express.static('public'));
 app.use('', require('./routes'));
 
