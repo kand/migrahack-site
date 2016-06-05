@@ -16,6 +16,12 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: $migrahack-overlay-color;
+  font-size: modular-scale(3);
+  text-align: center;
+}
+
 #main-container {
   padding: 15px;
   margin-bottom: 250px;

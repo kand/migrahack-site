@@ -60,6 +60,17 @@
       }
     }
 
+    .slide-info {
+      @include span-columns(6);
+      @include shift(3);
+
+      color: $migrahack-overlay-color;
+
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
     .img-main {
       width: 85%;
     }
