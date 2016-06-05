@@ -1,2 +1,1 @@
-require('./static/styles.scss');
-require('./static/client.js');
+require('./app/main.scss');
