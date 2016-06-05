@@ -49,6 +49,15 @@
       display: block;
     }
 
+    &.sources {
+      color: $migrahack-overlay-color;
+      margin: 25px;
+
+      ol {
+        list-style: decimal;
+      }
+    }
+
     .img-main {
       width: 85%;
     }
