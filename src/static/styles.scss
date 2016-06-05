@@ -1,1 +1,11 @@
 @import 'bourbon';
+@import 'neat';
+
+body {
+  @include outer-container;
+}
+
+#main-container {
+  @include span-columns(6);
+  @include shift(3);
+}

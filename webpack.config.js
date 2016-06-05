@@ -2,12 +2,13 @@
 
 let bourbon = require('bourbon');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+let neat = require('bourbon-neat');
 let path = require('path');
 let webpack = require('webpack');
 
 module.exports = [{
   entry: {
-    app: './src/app',
+    app: './src/bundle',
     vendor: [
     ]
   },
@@ -26,7 +27,8 @@ module.exports = [{
   },
   sassLoader: {
     includePaths: [
-      bourbon.includePaths
+      bourbon.includePaths,
+      neat.includePaths
     ]
   },
   plugins: [
