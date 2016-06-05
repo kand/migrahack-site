@@ -1,3 +1,5 @@
+@import 'neat';
+
 @import '../colors';
 
 #sliderMenu {
@@ -60,6 +62,10 @@
 
     .img-main {
       width: 85%;
+    }
+
+    .img-split-50 {
+      @include span-columns(6);
     }
   }
 }
