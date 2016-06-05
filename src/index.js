@@ -13,7 +13,8 @@ const DIR_TEMPLATES = path.join('.', 'src', 'templates');
 app.engine('hbs', expressHandlebars({
   defaultLayout: 'index',
   extname: 'hbs',
-  layoutsDir: DIR_TEMPLATES
+  layoutsDir: DIR_TEMPLATES,
+  partialsDir: path.join(DIR_TEMPLATES, 'partials')
 }));
 app.set('view engine', 'hbs');
 app.set('views', DIR_TEMPLATES);

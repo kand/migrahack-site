@@ -6,6 +6,10 @@ let setupSlider = ($menu) => {
   $menu.data('buttons', []);
   $menu.data('slides', []);
 
+  $menu.children('.toggle').on('click', () => {
+    $menu.toggleClass('active');
+  });
+
   return $menu;
 };
 
@@ -22,16 +26,12 @@ let createSlideButtonHandlerClick = ($menu, $slide, $button) => {
 let addSlide = ($menu, $slide) => {
   let title = $slide.data('title');
 
-  let $slideButton = $(`
-    <li>
-      <button>${title}</button>
-    </li>
-  `);
+  let $slideButton = $(`<li><button>${title}</button></li>`);
   $slideButton
     .find('button')
     .on('click', createSlideButtonHandlerClick($menu, $slide, $slideButton));
 
-  $menu.append($slideButton);
+  $menu.children('ul').append($slideButton);
 
   $menu.data('buttons').push($slideButton);
   $menu.data('slides').push($slide);

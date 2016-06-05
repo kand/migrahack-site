@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="/static/styles.css">
   </head>
   <body>
-    <ul id="sliderMenu"></ul>
+    <div id="sliderMenu">
+      <button class="toggle fa fa-bars"></button>
+      <ul></ul>
+    </div>
 
     <div id="main-container">
       <div id="sliderSlides">
@@ -20,11 +23,7 @@
             <p>The immigrant population in Illinois is moving toward the suburbs and downstate. Since traditionally the majority of Illinois immigrant population has been centered in Chicago, the majority of immigrant services and social service infrastructure is based in the Chicagoland area. Without access to legal services, immigrants in rural and downstate Illinois are less likely to have adequate legal support while navigating the criminal justice system.</p>
             <p><i>12.3 percent of immigrant households had an immigration-related legal problem. 73.0 percent of immigrants with immigration-related legal needs did not have their problem addressed.</i></p>
           </div>
-          <div id="legend">
-            <h3>Legend</h3>
-            <img src="/images/label_censustracts.png">
-            <img src="/images/label_miles.png">
-          </div>
+          {{> _legend }}
         </section>
         <section
             class="slide"
@@ -34,11 +33,7 @@
             <h2>2014 % foreign born</h2>
             <p>A majority of low-income immigrant households continue to live in Chicago, but 44 percent are living in the Chicago suburbs or downstate</p>
           </div>
-          <div id="legend">
-            <h3>Legend</h3>
-            <img src="/images/label_censustracts.png">
-            <img src="/images/label_miles.png">
-          </div>
+          {{> _legend }}
         </section>
         <section
             class="slide"
@@ -46,13 +41,10 @@
           <img src="/images/n_organizations.png">
           <div id="infobox">
             <h2>2014 location of organizations</h2>
-            <p>Orgs listed are BIA accredited, or have lawyers that provide free/low cost legal aid.</p>
+            <p>This map displays that, despite an increase in foreign-born outside of the city, social service organizations (in green) are almost exclusively in the Chicagoland area. These are organizations that are federally endorsed to provide legal services to immigrants.</p>
+            <p>Note: Orgs listed are BIA accredited, or have lawyers that provide free/low cost legal aid.</p>
           </div>
-          <div id="legend">
-            <h3>Legend</h3>
-            <img src="/images/label_censustracts.png">
-            <img src="/images/label_miles.png">
-          </div>
+          {{> _legend }}
         </section>
         <section
             class="slide"
@@ -62,11 +54,7 @@
             <h2>2014 orgs with radii</h2>
             <p><i>The average annual caseload for each staff attorney is 330, which includes 246 “brief service” matters, 33 cases involving “representation without litigation,” and 51 cases involving litigation or an administrative hearing</i></p>
           </div>
-          <div id="legend">
-            <h3>Legend</h3>
-            <img src="/images/label_censustracts.png">
-            <img src="/images/label_miles.png">
-          </div>
+          {{> _legend }}
         </section>
         <section
             class="slide"
@@ -79,6 +67,7 @@
       </div>
     </div>
 
+    <script src="https://use.fontawesome.com/47eefb556d.js"></script>
     <script src="/static/vendor.js"></script>
     <script src="/static/client.js"></script>
   </body>
