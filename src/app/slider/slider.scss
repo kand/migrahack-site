@@ -75,8 +75,9 @@
       width: 85%;
     }
 
-    .img-split-50 {
-      @include span-columns(6);
+    .img-split-25 {
+      @include span-columns(2);
+      @include shift(5);
     }
   }
 }
