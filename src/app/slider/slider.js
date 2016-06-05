@@ -1,24 +1,44 @@
 const $ = require('jquery');
 
-let setupSlider = (menu) => {
-  let $menu = $(menu);
+const CLASS_ACTIVE = 'active';
+
+let setupSlider = ($menu) => {
+  $menu.data('slides', []);
 
   return $menu;
 };
 
-let addSlide = ($menu, item) => {
-  let $item = $(item);
-  let title = $item.data('title');
+let createSlideButtonHandlerClick = ($menu, $slide) => {
+  return () => {
+    $menu.data('slides').forEach(($otherSlide) => $otherSlide.removeClass(CLASS_ACTIVE));
+    $slide.addClass(CLASS_ACTIVE);
+  };
+};
 
-  $menu.append(`<li><i class="slider-circle fa fa-circle"></i><span>${title}</span></li>`);
+let addSlide = ($menu, $slide) => {
+  let title = $slide.data('title');
+
+  let $slideButton = $(`
+    <li>
+      <i class="slider-circle fa fa-circle"></i>
+      <span>${title}</span>
+    </li>
+  `);
+  $slideButton.on('click', createSlideButtonHandlerClick($menu, $slide));
+
+  $menu.append($slideButton);
+
+  $menu.data('slides').push($slide);
 };
 
 module.exports = {
-  build (menuSelector, itemsSelector) {
-    let $menu = setupSlider(menuSelector);
+  build (menuSelector, slidesSelector) {
+    let $menu = setupSlider($(menuSelector));
 
-    $(itemsSelector).each(function () {
-      addSlide($menu, this);
+    $(slidesSelector).each(function () {
+      addSlide($menu, $(this));
     });
+
+    $menu.data('slides')[0].addClass(CLASS_ACTIVE);
   }
 };
