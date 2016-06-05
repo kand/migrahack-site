@@ -1,24 +1,24 @@
 const $ = require('jquery');
 
-let setupMenu = (menu) => {
+let setupSlider = (menu) => {
   let $menu = $(menu);
 
   return $menu;
 };
 
-let addMenuItem = ($menu, item) => {
+let addSlide = ($menu, item) => {
   let $item = $(item);
   let title = $item.data('title');
 
-  $menu.append(`<li><i class="menu-circle fa fa-circle"></i><span>${title}</span></li>`);
+  $menu.append(`<li><i class="slider-circle fa fa-circle"></i><span>${title}</span></li>`);
 };
 
 module.exports = {
   build (menuSelector, itemsSelector) {
-    let $menu = setupMenu(menuSelector);
+    let $menu = setupSlider(menuSelector);
 
     $(itemsSelector).each(function () {
-      addMenuItem($menu, this);
+      addSlide($menu, this);
     });
   }
 };

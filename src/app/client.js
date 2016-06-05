@@ -1,5 +1,5 @@
 const $ = require('jquery');
 
-const menu = require('./menu/menu');
+const slider = require('./slider/slider');
 
-menu.build('#menu', '#slides section');
+slider.build('#sliderMenu', '#sliderSlides section');
