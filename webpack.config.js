@@ -10,6 +10,7 @@ module.exports = [{
   entry: {
     app: './src/bundle',
     vendor: [
+      'jquery'
     ]
   },
   output: {
@@ -20,6 +21,23 @@ module.exports = [{
     loaders: [{
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style', 'css!sass')
+    }, {
+      test: /\.js?$/,
+      exclude: /node_modules/,
+      loader: 'babel'
+    }, {
+      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'url',
+      query: {
+          limit: 10000,
+          mimetype: 'application/font-woff'
+      }
+    }, {
+      test: /\.jpe?g$|\.gif$|\.png$/,
+      loader: 'url'
+    }, {
+      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: 'file'
     }]
   },
   resolve: {
