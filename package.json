@@ -16,9 +16,7 @@
     "express-handlebars": "^3.0.0",
     "font-awesome": "^4.6.3",
     "handlebars": "^4.0.5",
-    "jquery": "^2.2.4"
-  },
-  "devDependencies": {
+    "jquery": "^2.2.4",
     "babel": "^6.5.2",
     "babel-loader": "^6.2.4",
     "bourbon": "^5.0.0-beta.5",
